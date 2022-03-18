@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Кандидат по id
+{% endblock %}
+
+{% block body %}
+    <h1>{{ data[0] }}</h1>
+    <p>{{ data[1] }}</p>
+    <img src="{{ data[2] }}" width=200/>
+    <p>{{ data[3] }}</p>
+{% endblock %}
+
+
