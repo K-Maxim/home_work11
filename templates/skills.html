@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Кандидат по навыкам
+{% endblock %}
+
+{% block body %}
+    <h1>найдено кандидатов: {{ quantity }}</h1>
+    {% for id in range(quantity) %}
+        {% if person_skills[id] in full_person_skills %}
+        <p><a href="http://127.0.0.1:5000/candidate/{{ full_person_skills.index(person_skills[id])+1 }}">
+            {{ candidate_list[full_person_skills.index(person_skills[id])] }}</a></p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
