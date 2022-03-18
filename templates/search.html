@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Кандидат по имени
+{% endblock %}
+
+{% block body %}
+    <h1>найдено кандидатов: {{ quantity }}</h1>
+    {% for id in range(quantity) %}
+        {% if names[id] in candidate_list %}
+        <p><a href="http://127.0.0.1:5000/candidate/{{ candidate_list.index(names[id])+1 }}">{{ names[id] }}</a></p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
+
+
